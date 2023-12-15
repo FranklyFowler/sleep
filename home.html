@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="home.css" rel="stylesheet" type="text/css">
+    <title>Document</title>
+</head>
+
+<body>
+    <span class="container">
+        <span id="name" class="title">HELLO, LUKAS <img class="sleepy" src="sleep.png"></span>
+            <span class="button-container">
+            <button onclick="redirectToPage1('home.html')" class="button" class="log">TODAYS HOURS</button>
+            <button onclick="redirectToPage2('month.html')" class="button" class="month">MONTHS HOURS</button>
+            <button onclick="redirectToPage3('info.html')" class="button" class="sleep">INFO ON SLEEP</button>
+            </span>
+        
+        
+        <div class="input-area">
+            <div class="moving">
+                
+                <p class="heading">PLEASE ENTER THE AMOUNT OF HOURS YOU SLEPT LAST NIGHT</p>
+                <img class="image" src="https://cdn.sleepnumber.com/image/upload/f_auto,q_auto:eco/v1629630679/workarea/content/assets/sh6cimpvrsg2596bpkop.jpg">
+                <h2>HOW MANY HOURS DID YOU SLEEP?</h2>
+
+                <div>
+                   <input id="hours" class="hours" type="text" placeholder="ENTER HOURS HERE">
+                </div>
+                <div id="computer" class="computer">
+                    THE COMUTER THINKS ...
+                </div>
+            </div>
+        </div>
+    </span>
+    
+    <script>
+        function redirectToPage1(page) {
+            window.location.href = page
+        }
+
+        function redirectToPage2(page) {
+            window.location.href = page
+        }
+
+        function redirectToPage3(page) {
+            window.location.href = page
+        }
+
+        document.addEventListener('keydown', function(eventObject){
+            console.log(eventObject.key);
+
+
+
+       
+        // getting your hours slept and giving an answer
+        if(eventObject.key == 'Enter'){
+            var number = document.getElementById('hours').value
+
+                if(number == 9 || number == 8){
+                    document.getElementById('computer').innerHTML = "The Computer thinks that you should be well rested..."
+                }
+                else if (number == 7 || number == 6){
+                    document.getElementById('computer').innerHTML = "The Computer thinks that you should go to bed a little earlier..."
+                }
+                else if (number == 5 || number == 4){
+                    document.getElementById('computer').innerHTML = "The Computer thinks that you are tired..."
+                }
+                else if (number == 3 || number == 2){
+                    document.getElementById('computer').innerHTML = "The Computer thinks that you are very tired..."
+                }
+                else if (number == 1){
+                    document.getElementById('computer').innerHTML = "The Computer wonders how you are awake..."
+                }
+                else if (number == 0){
+                    document.getElementById('computer').innerHTML = "The Computer is suprised you are functioning and awake..."
+                }
+                else if (number <= 0 || number > 24){
+                    document.getElementById('computer').innerHTML = "The Computer knows you're lying..."
+                }
+                else if (number >= 10 && number <= 24){
+                    document.getElementById('computer').innerHTML = "The Computer knows you are very well rested..."
+                }
+                else if (number === ''){
+                    document.getElementById('computer').innerHTML = "The Computer thinks that theres no input..."
+                }
+                else {
+                    document.getElementById('computer').innerHTML = "The Computer thinks you didn't enter a number..."
+                }
+            }
+        
+        
+    });
+    </script>
+
+
+</body>
+</html>

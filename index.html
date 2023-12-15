@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login / Sign Up form </title>
+    <link rel="shortcut icon" href="">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+    <div class="container">
+            <!-- The Title -->
+            <h1> Login</h1>
+
+            <!-- Creates Error -->
+            <div hidden class="error"></div>
+        <form id="loginForm">
+                <!-- User's Inputs -->
+                <div class="input-group">
+                    <input type="text" id="username" class="input" autofocus placeholder="Username or email">
+                </div>
+                <div class="input-group">
+                    <input  id="password" type="password" class="input" autofocus placeholder="Password">
+                </div>
+        </form>    
+            <!-- Continue Button -->
+            <button id="Signin" class="continue-button" >Continue</button>
+        
+            <!-- Other links -->
+            <p><a href="password.html" >Forgot your password</a></p>
+            <p><a id="CreateAccountLink" href="create.html">Don't have an account? Create account</a></p>
+            
+    </div>
+
+<script >
+    //Opens Home page
+    function work(){ 
+            window.location.href = "home.html";
+            }
+    document.getElementById("Signin").addEventListener("click", function () {
+        // Password
+        var L = "lukas";
+        var F = "1";
+
+        //User's inputs and Error
+        var username = document.getElementById("username").value;
+        var password = document.getElementById("password").value;
+        var error = document.querySelector(".error");
+        
+        //Checks Username and Password 
+        if (username == "" || password == "") {
+            error.innerHTML = "Username or password is empty";
+            error.removeAttribute("hidden");
+        } else if (username !== L || password !== F) {
+            error.innerHTML = "Username/Password is Incorrect"
+            error.removeAttribute("hidden");
+        }else {
+            error.innerHTML = "";
+            work()
+        }
+
+    });
+</script>
+</body>
+</html>

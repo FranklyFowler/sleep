@@ -1,0 +1,115 @@
+html {
+}
+
+body {
+    background-color: whitesmoke;
+    margin: 0;
+}
+
+.title {
+    font-family: 'Times New Roman', Times, serif;
+    color: #071e26;
+    font-size: 100px;
+    font-weight: bolder;
+}
+
+
+
+.button{
+    float: right;
+    padding:60px;
+    background-color:#dd6e42;
+    border: 0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: bolder;
+    color: #071e26;
+    font-size: x-large;
+    line-height: 0;
+    display: inline-block;
+}
+
+.button:hover {
+    background-color:#071e26;
+    color: white;
+}
+
+.input-area {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color:whitesmoke;
+    text-align: center;
+    padding:100px;
+
+}
+
+.moving {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: whitesmoke;
+    color:#071e26;
+    font-weight: lighter;
+}
+
+.hours {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    padding: 20px;
+    width: 75%;
+    background-color:#071e26;
+    text-align: center;
+    font-size: 16px;
+    border-radius: 5px;
+    color: white;
+    max-width: 50%;
+}
+
+.heading {
+  background-color: whitesmoke;
+  color: #071e26;
+  font-size: x-large;
+}
+
+.computer{
+    margin-top: 10px ;
+}
+
+.image {
+    border-radius: 10px;
+    max-width: 300px;
+}
+
+@media only screen and (max-width: 391px)
+{
+.title {
+    font-size: 30px;
+    float: left;
+    width: 100%;
+}
+
+.sleepy {
+    max-width: 50px;
+    float: right;
+}
+
+.image {
+    max-width: 200px;
+}
+
+.hours {
+    max-width: 400px;
+}
+
+.button-container{
+width: 100%;
+text-align: center;
+}
+
+.button{
+    padding: 14.9px;
+    font-size: 14px;
+    min-width: 120px;
+}
+
+.input-area{
+    padding: 0;
+}
+
+}
+
