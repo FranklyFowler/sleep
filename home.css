@@ -75,7 +75,7 @@ body {
     max-width: 300px;
 }
 
-@media only screen and (max-width: 350px)
+@media only screen and (max-width: 389px)
 {
 .title {
     font-size: 30px;
